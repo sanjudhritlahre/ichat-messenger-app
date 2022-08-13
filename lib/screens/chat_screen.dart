@@ -109,13 +109,17 @@ class _ChatScreenState extends State<ChatScreen> {
                 color: const Color(0xFFFFEFEE),
                 borderRadius: BorderRadius.circular(30.0),
               ),
-              child: Center(
-                child: TextField(
-                  textCapitalization: TextCapitalization.sentences,
-                  onChanged: (value) {},
-                  cursorColor: Colors.deepPurpleAccent,
-                  decoration: const InputDecoration.collapsed(
-                    hintText: 'Send a message...',
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Center(
+                  child: TextField(
+                    textCapitalization: TextCapitalization.sentences,
+                    textAlign: TextAlign.start,
+                    onChanged: (value) {},
+                    cursorColor: Colors.deepPurpleAccent,
+                    decoration: const InputDecoration.collapsed(
+                      hintText: 'Send a message...',
+                    ),
                   ),
                 ),
               ),
@@ -123,7 +127,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
            IconButton(
             icon: const Icon(Icons.telegram_rounded),
-            iconSize: 30.0,
+            iconSize: 35.0,
             color: Colors.deepPurpleAccent,
             onPressed: () {},
           ),
