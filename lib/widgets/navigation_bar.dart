@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:ichat/screens/home_screen.dart';
-import '../screens/profile_screen.dart';
+import 'package:ichat/settings/settings.dart';
 import '../screens/search_screen.dart';
 import '../screens/story_screen.dart';
 import '../screens/upload_screen.dart';
@@ -84,7 +84,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
         widget = const StoryPage();
         break;
       default:
-        widget = const ProfilePage();
+        widget = const SettingsPage();
         break;
     }
     return widget;

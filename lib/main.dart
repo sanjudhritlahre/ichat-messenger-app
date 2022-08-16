@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ichat/utils/routes.dart';
 import 'package:ichat/widgets/navigation_bar.dart';
+import 'settings/settings.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         primaryColorLight: Colors.deepPurpleAccent,
       ),
-      home: const HomeNavigationBar(),
+
+      routes: {
+        "/": (context) => const SettingsPage(),
+        IchatRoutes.homeNavigationBarRoute : (context) => const HomeNavigationBar(),
+        IchatRoutes.settingsPageRoute : (context) => const SettingsPage(),
+      },
     );
   }
 }

@@ -19,8 +19,9 @@ class Message {
 // YOU - current user
 final User currentUser = User(
   id: 0,
-  name: 'Current User',
+  name: 'Sanju Dhritlahre',
   imageUrl: 'assets/images/greg.jpg',
+  number: 6267081468,
 );
 
 // USERS
@@ -28,36 +29,43 @@ final User greg = User(
   id: 1,
   name: 'Greg',
   imageUrl: 'assets/images/greg.jpg',
+   number: 6267081468,
 );
 final User james = User(
   id: 2,
   name: 'James',
   imageUrl: 'assets/images/james.jpg',
+   number: 6267081468,
 );
 final User john = User(
   id: 3,
   name: 'John',
   imageUrl: 'assets/images/john.jpg',
+   number: 6267081468,
 );
 final User olivia = User(
   id: 4,
   name: 'Olivia',
   imageUrl: 'assets/images/olivia.jpg',
+   number: 6267081468,
 );
 final User sam = User(
   id: 5,
   name: 'Sam',
   imageUrl: 'assets/images/sam.jpg',
+   number: 6267081468,
 );
 final User sophia = User(
   id: 6,
   name: 'Sophia',
   imageUrl: 'assets/images/sophia.jpg',
+   number: 6267081468,
 );
 final User steven = User(
   id: 7,
   name: 'Steven',
   imageUrl: 'assets/images/steven.jpg',
+  number: 6267081468,
 );
 
 // FAVORITE CONTACTS
