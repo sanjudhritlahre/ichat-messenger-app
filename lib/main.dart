@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ichat/settings/widgets/darkmode_widgets.dart';
 import 'package:ichat/utils/routes.dart';
 import 'package:ichat/widgets/navigation_bar.dart';
 import 'settings/settings.dart';
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
       ),
 
       routes: {
-        "/": (context) => const SettingsPage(),
+        "/": (context) => const HomeNavigationBar(),
         IchatRoutes.homeNavigationBarRoute : (context) => const HomeNavigationBar(),
         IchatRoutes.settingsPageRoute : (context) => const SettingsPage(),
+        IchatRoutes.darkModedraggablescrollsheetRoute : (context) => const DarkModeDraggableScrollableSheet(),
       },
     );
   }

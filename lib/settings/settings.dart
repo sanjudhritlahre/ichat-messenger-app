@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ichat/models/message_model.dart';
-import 'package:ichat/screens/home_screen.dart';
+import 'package:ichat/widgets/navigation_bar.dart';
 import 'components/account_settings.dart';
 import 'components/bottom_tagline.dart';
+import 'components/chat_settings.dart';
 import 'components/darkmode_settings.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -22,7 +23,7 @@ class _SettingsPageState extends State<SettingsPage> {
         leading: GestureDetector(
           onTap: () => Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => const HomeScreen()),
+            MaterialPageRoute(builder: (_) => const HomeNavigationBar()),
           ),
           child: const Icon(
             Icons.arrow_back_ios,
@@ -72,6 +73,10 @@ class _SettingsPageState extends State<SettingsPage> {
             const DarkModeSettings(),
             const SizedBox(height: 20.0),
             const AccountSettings(),
+            const SizedBox(
+              height: 20.0,
+            ),
+            const ChatSettings(),
           ],
         ),
       ),
