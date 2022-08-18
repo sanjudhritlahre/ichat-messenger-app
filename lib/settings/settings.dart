@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ichat/models/message_model.dart';
+import 'package:ichat/settings/components/chat_settings.dart';
 import 'package:ichat/widgets/navigation_bar.dart';
 import 'components/account_settings.dart';
 import 'components/bottom_tagline.dart';
-import 'components/chat_settings.dart';
-import 'components/darkmode_settings.dart';
+import 'components/thememode_settings.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -19,6 +19,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.white,
         leading: GestureDetector(
           onTap: () => Navigator.push(
@@ -43,40 +44,43 @@ class _SettingsPageState extends State<SettingsPage> {
         padding: const EdgeInsets.only(top: 20.0, right: 20.0),
         child: Column(
           children: <Widget>[
-            ListTile(
-              leading: CircleAvatar(
-                radius: 35.0,
-                backgroundImage: AssetImage(currentUser.imageUrl),
-              ),
-              title: Text(
-                currentUser.name,
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+            Column(
+              children: <Widget>[
+                ListTile(
+                  leading: CircleAvatar(
+                    radius: 35.0,
+                    backgroundImage: AssetImage(currentUser.imageUrl),
+                  ),
+                  title: Text(
+                    currentUser.name,
+                    style: const TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  subtitle: Text(
+                    currentUser.number.toString(),
+                    style: const TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  trailing: const Icon(
+                    Icons.qr_code_2_rounded,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-              subtitle: Text(
-                currentUser.number.toString(),
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              trailing: const Icon(
-                Icons.qr_code_2_rounded,
-                color: Colors.black,
-              ),
+              ],
             ),
-            const SizedBox(
-              height: 50.0,
+            const SizedBox(height: 10.0,),
+            const Divider(
+              thickness: 1.0,
+              indent: 20.0,
             ),
-            const DarkModeSettings(),
-            const SizedBox(height: 20.0),
-            const AccountSettings(),
-            const SizedBox(
-              height: 20.0,
-            ),
-            const ChatSettings(),
+            const SizedBox(height: 20.0,),
+             const ThemeModeSettings(),
+             const AccountSettings(),
+             const ChatSettings(),
           ],
         ),
       ),
@@ -84,3 +88,5 @@ class _SettingsPageState extends State<SettingsPage> {
     );
   }
 }
+
+

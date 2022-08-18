@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AccountSettings extends StatelessWidget {
@@ -7,42 +8,40 @@ class AccountSettings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-              margin: const EdgeInsets.only(left: 20.0),
-              height: 45,
-              width: 45,
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              child: const Icon(
-                Icons.account_circle_rounded,
-                size: 30.0,
-                color: Colors.white,
-              )),
-          Container(
-            margin: const EdgeInsets.only(left: 20.0),
-            child: const Text(
-              "Accounts",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(left: 180.0),
-            child: const Icon(
-              Icons.arrow_forward_ios_rounded,
-              size: 20.0,
-            ),
-          ),
-        ],
+    return ListTile(
+      leading: Container(
+        height: 45,
+        width: 45,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30.0),
+          color: Colors.greenAccent,
+        ),
+        child: const Icon(
+          CupertinoIcons.person_crop_circle_fill,
+          color: Colors.white,
+          size: 30.0,
+        ),
+      ),
+      title: const Text(
+        "Manage Accounts",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontSize: 18.0,
+        ),
+      ),
+      subtitle: const Text(
+        "Privacy, Security, Verification, Number, more...",
+        style: TextStyle(
+          color: Colors.blueGrey,
+          fontWeight: FontWeight.bold,
+          wordSpacing: 1.5,
+          fontSize: 13.0,
+        ),
+      ),
+      trailing: const Icon(
+        CupertinoIcons.chevron_right_circle_fill,
+        color: Colors.greenAccent,
       ),
     );
   }

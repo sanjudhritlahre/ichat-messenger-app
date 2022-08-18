@@ -8,7 +8,7 @@ class BottomTagLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 20.0),
+      margin: const EdgeInsets.only(bottom: 80.0),
       child: const Text(
         "from Orisis",
         style: TextStyle(

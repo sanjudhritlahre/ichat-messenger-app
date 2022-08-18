@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
 
       routes: {
-        "/": (context) => const HomeNavigationBar(),
+        "/": (context) => const SettingsPage(),
         IchatRoutes.homeNavigationBarRoute : (context) => const HomeNavigationBar(),
         IchatRoutes.settingsPageRoute : (context) => const SettingsPage(),
         IchatRoutes.darkModedraggablescrollsheetRoute : (context) => const DarkModeDraggableScrollableSheet(),
