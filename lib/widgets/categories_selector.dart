@@ -9,7 +9,9 @@ class CategorySelector extends StatefulWidget {
 }
 
 class _CategorySelectorState extends State<CategorySelector> {
+  
   int selectedIndex = 0;
+  
   final List<String> categories = [
     'Messages',
     'Story',
