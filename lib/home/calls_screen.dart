@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class UploadPage extends StatelessWidget {
-  const UploadPage({Key? key}) : super(key: key);
+class CallsPage extends StatelessWidget {
+  const CallsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.green,
       body: Center(
         child: Text(
-          'Upload Data',
+          'Search Page',
           style: TextStyle(
             fontSize: 60,
             color: Colors.white,

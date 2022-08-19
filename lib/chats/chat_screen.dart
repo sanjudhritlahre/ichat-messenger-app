@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ichat/models/message_model.dart';
 import 'package:ichat/models/user_model.dart';
@@ -92,13 +93,13 @@ class _ChatScreenState extends State<ChatScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       height: 70.0,
-      color: Colors.white,
+      color: Colors.deepPurpleAccent,
       child: Row(
-        children: <Widget> [
+        children: <Widget>[
           IconButton(
-            icon: const Icon(Icons.photo_rounded),
-            iconSize: 30.0,
-            color: Colors.deepPurpleAccent,
+            icon: const Icon(CupertinoIcons.camera_circle_fill),
+            iconSize: 40.0,
+            color: Colors.white,
             onPressed: () {},
           ),
           Expanded(
@@ -106,29 +107,48 @@ class _ChatScreenState extends State<ChatScreen> {
               height: 50,
               width: 100,
               decoration: BoxDecoration(
-                color: const Color(0xFFFFEFEE),
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(30.0),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 10.0),
+                padding: const EdgeInsets.only(left: 5.0),
                 child: Center(
                   child: TextField(
+                    keyboardType: TextInputType.multiline,
+                    maxLines: 7,
+                    minLines: 1,
                     textCapitalization: TextCapitalization.sentences,
                     textAlign: TextAlign.start,
                     onChanged: (value) {},
                     cursorColor: Colors.deepPurpleAccent,
-                    decoration: const InputDecoration.collapsed(
+                    decoration: InputDecoration(
                       hintText: 'Send a message...',
+                      prefixIcon: IconButton(
+                        icon: const Icon(
+                          CupertinoIcons.smiley_fill,
+                          size: 30.0,
+                          color: Colors.amberAccent,
+                        ),
+                        onPressed: () {},
+                      ),
+                      suffixIcon: IconButton(
+                        icon: const Icon(
+                          CupertinoIcons.square_grid_2x2_fill,
+                          size: 30.0,
+                          color: Colors.greenAccent,
+                        ),
+                        onPressed: () {},
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
           ),
-           IconButton(
+          IconButton(
             icon: const Icon(Icons.telegram_rounded),
-            iconSize: 35.0,
-            color: Colors.deepPurpleAccent,
+            iconSize: 40.0,
+            color: Colors.white,
             onPressed: () {},
           ),
         ],
@@ -139,20 +159,52 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColorLight,
+      backgroundColor: Colors.deepPurpleAccent,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColorLight,
+        backgroundColor: Colors.deepPurpleAccent,
+        leadingWidth: 100.0,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Row(
+            children: [
+              InkWell(
+                onTap: () => Navigator.pop(context),
+                child: const Icon(Icons.arrow_back_ios),
+              ),
+              const SizedBox(
+                width: 5.0,
+              ),
+              CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage(widget.user.imageUrl),
+              ),
+            ],
+          ),
+        ),
         title: Text(
           widget.user.name,
           style: const TextStyle(
-            fontSize: 28.0,
+            fontSize: 25.0,
             fontWeight: FontWeight.bold,
           ),
         ),
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.more_horiz_rounded),
+            icon: const Icon(CupertinoIcons.phone_circle_fill),
+            iconSize: 30,
+            color: Colors.white,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(CupertinoIcons.videocam_circle_fill),
+            iconSize: 30,
+            color: Colors.white,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(
+                CupertinoIcons.line_horizontal_3_decrease_circle_fill),
             iconSize: 30,
             color: Colors.white,
             onPressed: () {},

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/navigation_bar.dart';
+import '../home/home_screen.dart';
 import 'components/bottom_tagline.dart';
 import 'components/user_settings_card.dart';
 
@@ -21,7 +21,9 @@ class _SettingsPageState extends State<SettingsPage> {
         leading: GestureDetector(
           onTap: () => Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => const HomeNavigationBar()),
+            MaterialPageRoute(
+              builder: (_) => const HomeScreen(),
+            ),
           ),
           child: const Icon(
             Icons.arrow_back_ios,
@@ -42,7 +44,3 @@ class _SettingsPageState extends State<SettingsPage> {
     );
   }
 }
-
-
-
-

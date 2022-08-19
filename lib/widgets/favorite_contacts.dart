@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ichat/models/message_model.dart';
-import '../screens/chat_screen.dart';
+
+import '../chats/chat_screen.dart';
 
 class FavoriteContacts extends StatelessWidget {
   const FavoriteContacts({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+    return Container(
+      color: const Color(0xFFFEF9EB),
+      padding: const EdgeInsets.all(0.0),
       child: Column(
         children: <Widget>[
           Padding(
@@ -19,7 +21,7 @@ class FavoriteContacts extends StatelessWidget {
                 const Text(
                   'Favorite Contacts',
                   style: TextStyle(
-                    color: Colors.blueGrey,
+                    color: Colors.black,
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.0,

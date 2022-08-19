@@ -1,6 +1,9 @@
 class IchatRoutes {
   static String loginRoute = "/login";
-  static String homeNavigationBarRoute = "/homeNavigationBar";
+  static String bottomNavigationBarRoute = "/bottomNavigationBar";
   static String settingsPageRoute = "/settingsPage";
-  static String darkModedraggablescrollsheetRoute = "/darkModedraggablescrollsheet";
+  static String darkModedraggablescrollsheetRoute =
+      "/darkModedraggablescrollsheet";
+  static String homeScreenRoute = "/homeScreen";
+  static String chatScreenRoute = "/chatScreen";
 }
